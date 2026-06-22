@@ -7,6 +7,10 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('meu-primer-angular');
+
+export class AppComponent {
+  title = signal('Món Angular');
+  changeTitle() {
+    this.title.set('Títol Canviat per Signal!');
+  }
 }
